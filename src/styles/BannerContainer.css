@@ -1,0 +1,25 @@
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px 49px;
+
+}
+
+.image-container img {
+  object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 220px;
+  filter: brightness(65%);
+}
+
+
+.image-container-text {
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+}
