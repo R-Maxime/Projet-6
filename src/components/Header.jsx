@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Logo from '../assets/logo_colored.png';
 import '../styles/Header.css';
 
 export default function Header() {
-  const [isActive, setActive] = useState(null);
+  const setActive = useState('')[1];
 
   const handleLinkClick = (link) => {
     setActive(link);
@@ -13,12 +14,20 @@ export default function Header() {
     <header className='kasa-header'>
       <img src={Logo} alt="Logo de Kasa" className='kasa-logo' />
       <nav className='kasa-nav'>
-        <a className={`kasa-nav-item ${isActive === 'accueil' ? 'active' : ''}`}
-          href='#accueil'
-          onClick={() => handleLinkClick('accueil')}>Accueil</a>
-        <a className={`kasa-nav-item ${isActive === 'about' ? 'active' : ''}`}
-          href='#about'
-          onClick={() => handleLinkClick('about')}>À propos</a>
+        <NavLink
+          to='/'
+          className='kasa-nav-item'
+          onClick={() => handleLinkClick('accueil')}
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          to='/about'
+          className='kasa-nav-item'
+          onClick={() => handleLinkClick('about')}
+        >
+          À propos
+        </NavLink>
       </nav>
     </header>
   );
