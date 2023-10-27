@@ -3,7 +3,7 @@ import { Logements } from "./Logements";
 
 async function loadLogements() {
   try {
-    const response = await fetch('/src/datas/logements.json');
+    const response = await fetch(new URL('/src/datas/logements.json', import.meta.url));
     console.log('Chargement des données...')
     if (!response.ok) {
       throw new Error('HTTP Error ' + response.status);
