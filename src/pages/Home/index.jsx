@@ -1,17 +1,17 @@
 import BannerContainer from "../../components/BannerContainer"
 import cliff from "../../assets/cliff.png"
-import DisplayLogements from "../../components/DisplayLogements";
+import DisplayHousings from "../../components/DisplayHousings";
 
 function Home() {
   return (
-    <div>
+    <body>
       <BannerContainer
         img={cliff}
         altText="Image d'une falaise avec la mer dechainée en contrebas"
         text="Chez vous, partout et ailleurs"
       />
-      <DisplayLogements />
-    </div>
+      <DisplayHousings />
+    </body>
   );
 }
 

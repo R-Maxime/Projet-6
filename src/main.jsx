@@ -6,7 +6,7 @@ import './styles/main.scss'
 import Header from './components/Header';
 import Footer from "./components/Footer"
 import About from './pages/About';
-import Logements from './pages/Logements';
+import Housings from './pages/Housings';
 import NotFound from './pages/Error';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -17,7 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/">
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="logement/:id" element={<Logements />} />
+          <Route path="housing/:id" element={<Housings />} />
           <Route path="404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Route>

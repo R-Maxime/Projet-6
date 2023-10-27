@@ -1,0 +1,12 @@
+$grey: #F6F6F6;
+
+.housing-container {
+  display: grid;
+  border-radius: 25px;
+  background-color: $grey;
+  margin: 0 100px 50px 100px;
+  padding: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  width: 90%;
+}

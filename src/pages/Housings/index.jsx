@@ -1,28 +1,28 @@
 import { Navigate, useParams } from 'react-router-dom';
-import logementsUtils from "../../datas/LogementsUtils";
+import HousingUtils from "../../datas/HousingUtils";
 import { useEffect, useState } from 'react';
 
-function Logements() {
-  const LogementId = useParams().id;
-  const [logement, setLogement] = useState({})
+function Housings() {
+  const housingId = useParams().id;
+  const [housing, setHousing] = useState({})
   const [isDataLoading, setDataLoading] = useState(false)
 
   useEffect(() => {
-    async function fetchLogement() {
+    async function fetchHousing() {
       setDataLoading(true);
       try {
-        const lgmt = await logementsUtils.getLogementById(LogementId);
-        setLogement(lgmt);
+        const lgmt = await HousingUtils.getHousingById(housingId);
+        setHousing(lgmt);
       } catch (err) {
         console.error(err);
       } finally {
         setDataLoading(false);
       }
     }
-    fetchLogement();
-  }, [LogementId]);
+    fetchHousing();
+  }, [housingId]);
 
-  if (!logement) {
+  if (!housing) {
     return <Navigate to="/404" />
   }
 
@@ -32,11 +32,11 @@ function Logements() {
         <div>Chargement en cours...</div>
       ) : (
         <div>
-          <h1>{logement.title}</h1>
-          <p>{logement.description}</p>
+          <h1>{housing.title}</h1>
+          <p>{housing.description}</p>
           <img
-            src={logement.cover}
-            alt={logement.title}
+            src={housing.cover}
+            alt={housing.title}
             height={500}
             style={{
               display: "block",
@@ -53,4 +53,4 @@ function Logements() {
 
 }
 
-export default Logements
+export default Housings
