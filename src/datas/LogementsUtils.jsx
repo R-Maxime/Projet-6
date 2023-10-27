@@ -1,35 +1,40 @@
-import Logements from "./logements.json";
-import { LogementsCache } from "./LogementsCache";
+import { Logements } from "./Logements";
 
-LogementsCache.LOGEMENT_BY_ID = {};
-LogementsCache.LOGEMENT_BY_TITLE = {};
-LogementsCache.LOGEMENTS_BY_TAG = {};
 
-function getAllLogements() {
+async function loadLogements() {
+  try {
+    const response = await fetch('/src/datas/logements.json');
+    console.log('Chargement des données...')
+    if (!response.ok) {
+      throw new Error('HTTP Error ' + response.status);
+    }
+    const data = await response.json();
+    Logements.length = 0;
+    Logements.push(...data);
+  } catch (err) {
+    console.error('Erreur lors de la récupération des données :', err)
+  }
+}
+
+async function getAllLogements() {
+  if (!Logements.length) {
+    await loadLogements();
+  }
+
   return Logements;
 }
 
-function getLogementById(id) {
-  const data = LogementsCache.LOGEMENT_BY_ID[id]
-    || (LogementsCache.LOGEMENT_BY_ID[id] = Logements.find((logement) => logement.id === id));
-  return data
+async function getLogementById(id) {
+  if (!Logements.length) {
+    await loadLogements();
+  }
+  const data = Logements.find((logement) => logement.id === id);
+  return data;
 }
 
-function getLogementByTitle(title) {
-  const data = LogementsCache.LOGEMENT_BY_TITLE[title]
-    || (LogementsCache.LOGEMENT_BY_TITLE[title] = Logements.find((logement) => logement.title === title));
-  return data
-}
-
-function getLogementsByTag(tag) {
-  const data = LogementsCache.LOGEMENTS_BY_TAG[tag]
-    || (LogementsCache.LOGEMENTS_BY_TAG[tag] = Logements.filter((logement) => logement.tags.includes(tag)));
-  return data
-}
 
 export default {
   getAllLogements,
   getLogementById,
-  getLogementByTitle,
-  getLogementsByTag,
+  loadLogements
 };

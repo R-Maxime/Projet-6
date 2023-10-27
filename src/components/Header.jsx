@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/logo_colored.png';
-import '../styles/Header.css';
+import '../styles/Header.scss';
 
 export default function Header() {
   const setActive = useState('')[1];

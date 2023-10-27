@@ -9,15 +9,14 @@ footer {
   gap: 28.56px;
   position: absolute;
   bottom: 0;
-}
 
+  .footer-text{
+    font-size: 24px;
+    color: white;
+  }
 
-.footer-container img {
-  width: 122px;
-  height: 39px;
-}
-
-.footer-text {
-  color: white;
-  font-size: 24px;
+  img{
+    width: 122px;
+    height: 39px;
+  }
 }
