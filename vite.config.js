@@ -7,5 +7,14 @@ export default defineConfig({
   server: {
     host: true,
     port: 3000,
+  },
+  build:{
+    rollupOptions:{
+      output:{
+        manualChunks:{
+          'src/datas/logements.json': ['./src/datas/logements.json'],
+        }
+      }
+    }
   }
 })
