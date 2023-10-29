@@ -1,6 +1,7 @@
 import { Navigate, useParams } from 'react-router-dom';
 import HousingUtils from "../../datas/HousingUtils";
 import { useEffect, useState } from 'react';
+import Loader from '../../components/Loader';
 
 function Housings() {
   const housingId = useParams().id;
@@ -29,7 +30,7 @@ function Housings() {
   return (
     <div>
       {isDataLoading ? (
-        <div>Chargement en cours...</div>
+        <Loader />
       ) : (
         <div>
           <h1>{housing.title}</h1>

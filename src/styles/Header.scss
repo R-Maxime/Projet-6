@@ -26,3 +26,19 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .kasa-header {
+    margin: 40px 30px 50px;
+
+    .kasa-logo {
+      width: 150px;
+      height: 48px;
+    }
+
+    .kasa-nav-item {
+      font-size: 16px;
+      margin-left: 2rem;
+    }
+  }
+}

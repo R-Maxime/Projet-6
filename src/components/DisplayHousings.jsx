@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import HousingUtils from "../datas/HousingUtils";
 import '../styles/HousingContainer.scss';
 import HousingsCard from "./HousingsCard";
+import Loader from "./Loader";
+import PropTypes from 'prop-types';
 
 function DisplayHousings() {
-  const [isDataLoading, setDataLoading] = useState(false)
-  const [error, setError] = useState(false)
-  const [housings, setHousings] = useState([])
+  const [isDataLoading, setDataLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [housings, setHousings] = useState([]);
 
   useEffect(() => {
     async function fetchHousings() {
@@ -24,34 +26,54 @@ function DisplayHousings() {
   }, []);
 
   if (error) {
-    return <div>Erreur lors du chargement des logements</div>
+    return <div>Erreur lors du chargement des logements</div>;
   }
 
   return (
-    <div>
-      <ul>
-        {isDataLoading ? (
-          <li>Chargement en cours...</li>
-        ) :
-          (
-            <div className="housing-container">
-              {
-                housings.map((housing, index) => (
-                  <HousingsCard
-                    key={`${housing.id}-${index}`}
-                    id={housing.id}
-                    img={housing.cover}
-                    title={housing.title}
-                  />
-                ))
-              }
-            </div>
-          )
-        }
-      </ul>
+    <div className="housing-container">
+      {isDataLoading ? (
+        <Loader />
+      ) : (
+        <HousingList housings={housings} />
+      )}
     </div>
   );
 }
+
+function HousingList({ housings }) {
+  const [displayedHousings, setDisplayedHousings] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < housings.length) {
+      const timer = setTimeout(() => {
+        setDisplayedHousings((prevHousings) => [
+          ...prevHousings,
+          housings[currentIndex],
+        ]);
+        setCurrentIndex(currentIndex + 1);
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, housings]);
+
+  return (
+    <>
+      {displayedHousings.map((housing, index) => (
+        <HousingsCard
+          key={`${housing.id}-${index}`}
+          id={housing.id}
+          img={housing.cover}
+          title={housing.title}
+        />
+      ))}
+    </>
+  );
+}
+
+HousingList.propTypes = {
+  housings: PropTypes.array.isRequired,
+};
 
 
 

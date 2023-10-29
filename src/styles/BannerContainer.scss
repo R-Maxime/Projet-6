@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 100px 49px;
+  justify-content: center;
+  padding: 0 100px 50px;
 
   img {
     object-fit: cover;
@@ -20,4 +21,19 @@
   transform: translateX(-50%) translateY(-50%);
   color: white;
   font-size: 48px;
+}
+
+@media (max-width: 1200px) {
+  .image-container {
+    padding: 0 30px 22px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  .image-container-text {
+    font-size: 36px;
+    display: block;
+  }
 }
