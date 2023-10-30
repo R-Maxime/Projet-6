@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <header className='kasa-header'>
-      <NavLink to='/' exact>
+      <NavLink to='/' exact='true'>
         <img src={Logo} alt="Logo de Kasa" className='kasa-logo' />
       </NavLink>
       <nav className='kasa-nav'>

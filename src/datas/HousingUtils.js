@@ -1,5 +1,4 @@
-import { Housings } from "./Housings";
-
+const Housings = [];
 
 async function loadHousings() {
   try {
@@ -33,6 +32,7 @@ async function getHousingById(id) {
 
 
 export default {
+  Housings,
   getAllHousings,
   getHousingById,
   loadHousings
