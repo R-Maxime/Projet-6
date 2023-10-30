@@ -21,19 +21,43 @@
   transform: translateX(-50%) translateY(-50%);
   color: white;
   font-size: 48px;
+  animation: loadingDesktop 1s;
 }
 
 @media (max-width: 1200px) {
   .image-container {
-    padding: 0 30px 22px;
+    padding: 0 15px 22px;
 
     img {
+      height: 110px;
       border-radius: 10px;
     }
   }
 
   .image-container-text {
-    font-size: 36px;
+    font-size: 25px;
+    top: 200px;
     display: block;
+    animation: loadingMobile 1s;
+  }
+}
+
+@keyframes loadingDesktop {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 270px;
+  }
+}
+
+@keyframes loadingMobile {
+  from {
+    top: 0px;
+  }
+
+  to {
+    top: 200px;
   }
 }
