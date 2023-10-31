@@ -9,13 +9,23 @@ footer {
   gap: 28.56px;
   bottom: 0;
 
-  .footer-text{
+  p {
     font-size: 24px;
     color: white;
   }
 
-  img{
+  img {
     width: 122px;
     height: 39px;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer {
+    padding: 50px 0px 50px 0px;
+
+    p {
+      font-size: 12px;
+    }
   }
 }

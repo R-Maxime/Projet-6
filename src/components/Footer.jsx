@@ -3,9 +3,9 @@ import '../styles/Footer.scss';
 
 export default function Footer() {
   return (
-    <footer className='footer-container'>
+    <footer>
       <img src={Logo} alt='Logo de Kasa' />
-      <p className='footer-text'>© 2023 Kasa. All rights reserved</p>
+      <p>© 2023 Kasa. All rights reserved</p>
     </footer>
   )
 }

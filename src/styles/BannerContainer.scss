@@ -12,17 +12,17 @@
     height: 220px;
     filter: brightness(65%);
   }
+
+  p {
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    animation: loading 1s;
+    position: absolute;
+  }
 }
 
-.image-container-text {
-  position: absolute;
-  top: 270px;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: white;
-  font-size: 48px;
-  animation: loadingDesktop 1s;
-}
+
 
 @media (max-width: 1200px) {
   .image-container {
@@ -32,32 +32,20 @@
       height: 110px;
       border-radius: 10px;
     }
-  }
 
-  .image-container-text {
-    font-size: 25px;
-    top: 200px;
-    display: block;
-    animation: loadingMobile 1s;
+    p {
+      font-size: 25px;
+    }
   }
 }
 
-@keyframes loadingDesktop {
+@keyframes loading {
   from {
-    top: 0px;
+    opacity: 0;
+
   }
 
   to {
-    top: 270px;
-  }
-}
-
-@keyframes loadingMobile {
-  from {
-    top: 0px;
-  }
-
-  to {
-    top: 200px;
+    opacity: 1;
   }
 }

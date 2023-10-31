@@ -5,7 +5,7 @@ export default function BannerContainer({ img, altText, text }) {
   return (
     <div className="image-container">
       <img src={img} alt={altText} />
-      <p className="image-container-text">{text}</p>
+      <p >{text}</p>
     </div>
   );
 }
