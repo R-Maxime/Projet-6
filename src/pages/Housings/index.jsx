@@ -2,11 +2,12 @@ import { Navigate, useParams } from 'react-router-dom';
 import HousingUtils from "../../datas/HousingUtils";
 import { useEffect, useState } from 'react';
 import Loader from '../../components/Loader';
+import Carousel from '../../components/Carousel';
 
 function Housings() {
   const housingId = useParams().id;
   const [housing, setHousing] = useState({})
-  const [isDataLoading, setDataLoading] = useState(false)
+  const [isDataLoading, setDataLoading] = useState(true)
 
   useEffect(() => {
     async function fetchHousing() {
@@ -23,35 +24,21 @@ function Housings() {
     fetchHousing();
   }, [housingId]);
 
+  if (isDataLoading) {
+    return (
+      <>
+        <Loader />
+      </>
+    );
+  }
+
   if (!housing) {
-    return <Navigate to="/404" />
+    return <Navigate to="/404" />;
   }
 
   return (
-    <div>
-      {isDataLoading ? (
-        <Loader />
-      ) : (
-        <div>
-          <h1>{housing.title}</h1>
-          <p>{housing.description}</p>
-          <img
-            src={housing.cover}
-            alt={housing.title}
-            height={500}
-            style={{
-              display: "block",
-              margin: "25px auto",
-              padding: "15px",
-              backgroundColor: "#F9F9FC",
-              borderRadius: "30px",
-            }}
-          />
-        </div>
-      )}
-    </div>
+    <Carousel pictures={housing.pictures} />
   );
-
 }
 
 export default Housings

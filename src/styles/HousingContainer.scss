@@ -9,7 +9,7 @@ $grey: #F6F6F6;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 756px) {
     grid-template-columns: repeat(1, 1fr);
     display: flex;
     flex-direction: column;
