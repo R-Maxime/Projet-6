@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/Carousel.scss';
 
 
@@ -14,6 +14,22 @@ function Carousel({ pictures }) {
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
   };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowLeft') {
+      goToPrevious();
+    } else if (event.key === 'ArrowRight') {
+      goToNext();
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  });
 
   return (
     <div className="carousel-container">
