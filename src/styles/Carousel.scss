@@ -33,11 +33,14 @@
       color: white;
       font-size: 3.5rem;
       position: absolute;
-      top: 36%;
+      top: 21rem;
     }
+
+
 
     .left-arrow {
       left: 7.5rem;
+      z-index: 1;
     }
 
     .right-arrow {
@@ -52,8 +55,10 @@
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
       position: absolute;
-      bottom: 25rem;
-      left: 50%;
+      left: 48%;
+      top: 55%;
+      display: block;
+
     }
   }
 }
@@ -68,20 +73,20 @@
 
       .fa-solid {
         font-size: 1.5rem;
-        top: 27%;
+        top: 15rem;
       }
 
       .left-arrow {
-        left: 2rem;
+        left: 3rem;
       }
 
       .right-arrow {
-        right: 2rem;
+        right: 3rem;
       }
 
       .carousel-index {
-        bottom: 30rem;
-        left: 46%;
+        left: 45%;
+        top: 36%;
       }
     }
 
