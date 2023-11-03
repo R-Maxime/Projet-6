@@ -48,6 +48,7 @@
     }
 
     .carousel-index {
+      display: block;
       padding: 5px;
       color: #fff;
       font-size: 14px;
@@ -55,10 +56,8 @@
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
       position: absolute;
-      left: 48%;
-      top: 55%;
-      display: block;
-
+      left: 35rem;
+      top: 32rem;
     }
   }
 }
@@ -85,11 +84,9 @@
       }
 
       .carousel-index {
-        left: 45%;
-        top: 36%;
+        left: 12.5rem;
+        top: 21rem;
       }
     }
-
-
   }
 }
