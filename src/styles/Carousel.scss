@@ -56,7 +56,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
       position: absolute;
-      left: 35rem;
+      left: 50%;
       top: 32rem;
     }
   }
@@ -67,7 +67,7 @@
     padding: 0 5px 27px;
 
     .slider {
-      width: 335px;
+      width: 80%;
       height: 255px;
 
       .fa-solid {
@@ -76,15 +76,15 @@
       }
 
       .left-arrow {
-        left: 3rem;
+        left: 12%;
       }
 
       .right-arrow {
-        right: 3rem;
+        right: 12%;
       }
 
       .carousel-index {
-        left: 12.5rem;
+        left: 50%;
         top: 21rem;
       }
     }
