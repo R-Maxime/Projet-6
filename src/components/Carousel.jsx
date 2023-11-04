@@ -36,15 +36,15 @@ function Carousel({ pictures }) {
       {pictures.map((picture, index) => (
         index === currentIndex &&
         <div key={index} className='slider'>
-          <i onClick={goToPrevious} className='fa-solid fa-chevron-left left-arrow'></i>
+          {pictures.length > 1 && <i onClick={goToPrevious} className='fa-solid fa-chevron-left left-arrow'></i>}
           <img
             key={index}
             src={picture}
             alt={`Image ${index + 1}`}
             className={`carousel-image`}
           />
-          <span className='carousel-index'>{`${index + 1} / ${pictures.length}`}</span>
-          <i onClick={goToNext} className='fa-solid fa-chevron-right right-arrow'></i>
+          {pictures.length > 1 && <span className='carousel-index'>{`${index + 1} / ${pictures.length}`}</span>}
+          {pictures.length > 1 && <i onClick={goToNext} className='fa-solid fa-chevron-right right-arrow'></i>}
         </div>
       ))}
     </div>

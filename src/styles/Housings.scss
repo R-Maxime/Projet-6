@@ -1,0 +1,26 @@
+.housing {
+  padding: 50px 100px;
+  color: #FF6060;
+
+  .housing-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+      padding-top: 30px;
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      padding-bottom: 23px;
+    }
+  }
+
+
+  @media (max-width: 756px) {
+    padding: 0 15px 27px;
+  }
+}
