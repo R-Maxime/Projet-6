@@ -10,6 +10,7 @@
     h1 {
       padding-top: 30px;
       font-size: 36px;
+      font-weight: 500;
     }
 
     h2 {
@@ -18,9 +19,30 @@
       padding-bottom: 23px;
     }
   }
+}
 
+@media (max-width: 756px) {
+  .housing {
+    padding: 0px 20px;
 
-  @media (max-width: 756px) {
-    padding: 0 15px 27px;
+    .housing-info {
+      flex-direction: column;
+
+      h1 {
+        font-size: 18px;
+        padding: 15px 0 5px 0;
+      }
+
+      h2 {
+        padding-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .housing-host {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
   }
 }

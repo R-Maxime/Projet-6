@@ -6,6 +6,7 @@ import Carousel from '../../components/Carousel';
 import '../../styles/Housings.scss';
 import Tag from '../../components/Tag';
 import Host from '../../components/Host';
+import Rate from '../../components/Rate';
 
 function Housings() {
   const housingId = useParams().id;
@@ -56,6 +57,7 @@ function Housings() {
         </div>
         <div className='housing-host'>
           <Host host={housing.host} />
+          <Rate rate={Number(housing.rating)} />
         </div>
       </div>
     </div >

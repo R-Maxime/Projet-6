@@ -7,3 +7,10 @@
   margin: 0 10px 4px 0;
   padding: 4px 8px;
 }
+
+@media (max-width: 756px) {
+  .tag {
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}

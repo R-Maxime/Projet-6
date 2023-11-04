@@ -1,8 +1,9 @@
 .host {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: end;
   padding-top: 30px;
+  gap: 5px;
 
   .host-picture {
     border-radius: 50%;
@@ -11,10 +12,27 @@
   }
 
   .host-name {
+    display: flex;
+    align-items: center;
     font-size: 18px;
     line-height: 142.6%;
-    margin-right: 10px;
-    text-align: right;
-    width: 59%;
+    text-align: end;
+    width: 55%;
+  }
+}
+
+@media (max-width: 756px) {
+  .host {
+    padding-top: 10px;
+
+    .host-picture {
+      height: 40px;
+      width: 40px;
+    }
+
+    .host-name {
+      align-items: normal;
+      font-size: 14px;
+    }
   }
 }
