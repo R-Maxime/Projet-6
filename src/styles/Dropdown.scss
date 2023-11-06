@@ -7,24 +7,19 @@
     background: #FF6060;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
 
     .fa-solid {
       float: right;
-    }
-
-    .fa-chevron-up {
-      animation: rotate-0 0.4s both;
-      rotate: 0deg;
+      transition: transform 0.5s;
     }
 
     .fa-chevron-down {
-      animation: rotate-180 0.4s both;
-      rotate: 180deg;
+      transform: rotate(0deg);
     }
 
-
-    &:hover {
-      cursor: pointer;
+    .down {
+      transform: rotate(180deg);
     }
   }
 
@@ -32,29 +27,9 @@
     display: flex;
     flex-direction: column;
     background-color: #F6F6F6;
+    color: #FF6060;
     padding: 10px 20px 20px 20px;
     gap: 5px;
     font-size: 18px;
-  }
-}
-
-@keyframes rotate-180 {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-
-
-@keyframes rotate-0 {
-  0% {
-    transform: rotate(-180deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
   }
 }

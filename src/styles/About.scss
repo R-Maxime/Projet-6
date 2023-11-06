@@ -1,0 +1,21 @@
+.about {
+  .about-dropdown {
+    padding: 41px 100px;
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 756px) {
+  .about {
+    .about-dropdown {
+      padding: 0 15px 22px;
+      width: 100%;
+      margin: 0;
+      gap: 20px;
+    }
+  }
+}

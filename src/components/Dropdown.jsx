@@ -9,15 +9,11 @@ function Dropdown({ items, itemType }) {
     setIsOpen(!isOpen);
   };
 
-  const selectItem = () => {
-    setIsOpen(false);
-  };
-
   return (
     <div className='dropdown'>
       <div className='dropdown-header' onClick={toggleDropdown}>
         <span>{itemType}</span>
-        <i className={`fa-solid ${isOpen ? 'fa-chevron-down' : 'fa-chevron-up'}`}></i>
+        <i className={`fa-solid ${isOpen ? 'fa-chevron-down down' : 'fa-chevron-down up'}`}></i>
       </div>
       {isOpen && (
         <div className='dropdown-list'>
@@ -25,7 +21,6 @@ function Dropdown({ items, itemType }) {
             <div
               key={index}
               className='dropdown-list-item'
-              onClick={() => selectItem()}
             >
               {item}
             </div>
