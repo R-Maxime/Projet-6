@@ -19,11 +19,18 @@
       padding-bottom: 23px;
     }
   }
+
+  .housing-dropdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;
+    padding-top: 10px;
+  }
 }
 
 @media (max-width: 756px) {
   .housing {
-    padding: 0px 20px;
+    padding: 0 20px 27px;
 
     .housing-info {
       flex-direction: column;
@@ -43,6 +50,13 @@
         flex-direction: row-reverse;
         justify-content: space-between;
       }
+    }
+
+    .housing-dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 3.5px;
     }
   }
 }
