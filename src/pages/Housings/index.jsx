@@ -1,5 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom';
-import HousingUtils from "../../datas/HousingUtils";
+import HousingUtils from '../../datas/HousingUtils';
 import { useEffect, useState } from 'react';
 import Loader from '../../components/Loader';
 import Carousel from '../../components/Carousel';
@@ -10,8 +10,8 @@ import Rate from '../../components/Rate';
 
 function Housings() {
   const housingId = useParams().id;
-  const [housing, setHousing] = useState({})
-  const [isDataLoading, setDataLoading] = useState(true)
+  const [housing, setHousing] = useState({});
+  const [isDataLoading, setDataLoading] = useState(true);
 
   useEffect(() => {
     async function fetchHousing() {
@@ -64,4 +64,4 @@ function Housings() {
   );
 }
 
-export default Housings
+export default Housings;

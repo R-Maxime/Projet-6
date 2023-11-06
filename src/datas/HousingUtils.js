@@ -10,7 +10,7 @@ async function loadHousings() {
     Housings.length = 0;
     Housings.push(...data);
   } catch (err) {
-    console.error('Erreur lors de la récupération des données :', err)
+    console.error('Erreur lors de la récupération des données :', err);
   }
 }
 
@@ -29,7 +29,6 @@ async function getHousingById(id) {
   const data = Housings.find((housing) => housing.id === id);
   return data;
 }
-
 
 export default {
   Housings,

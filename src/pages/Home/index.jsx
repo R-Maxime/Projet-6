@@ -1,5 +1,5 @@
-import BannerContainer from "../../components/BannerContainer"
-import cliff from "../../assets/cliff.png"
+import BannerContainer from "../../components/BannerContainer";
+import cliff from "../../assets/cliff.png";
 import DisplayHousings from "../../components/DisplayHousings";
 
 function Home() {

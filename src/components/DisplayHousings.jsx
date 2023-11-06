@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import HousingUtils from "../datas/HousingUtils";
+import { useEffect, useState } from 'react';
+import HousingUtils from '../datas/HousingUtils';
 import '../styles/HousingContainer.scss';
-import HousingsCard from "./HousingsCard";
-import Loader from "./Loader";
+import HousingsCard from './HousingsCard';
+import Loader from './Loader';
 import PropTypes from 'prop-types';
 
 function DisplayHousings() {
@@ -49,12 +49,13 @@ function HousingList({ housings }) {
       const timer = setTimeout(() => {
         setDisplayedHousings((prevHousings) => [
           ...prevHousings,
-          housings[currentIndex],
+          housings[currentIndex]
         ]);
         setCurrentIndex(currentIndex + 1);
       }, 50);
       return () => clearTimeout(timer);
     }
+    return () => {};
   }, [currentIndex, housings]);
 
   return (
@@ -72,9 +73,7 @@ function HousingList({ housings }) {
 }
 
 HousingList.propTypes = {
-  housings: PropTypes.array.isRequired,
+  housings: PropTypes.array.isRequired
 };
-
-
 
 export default DisplayHousings;

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import '../styles/HousingCard.scss';
 import { NavLink } from 'react-router-dom';
 
@@ -14,14 +14,13 @@ function HousingsCard({ id, img, title }) {
         <h3 className="card-title">{title}</h3>
       </NavLink>
     </div>
-  )
+  );
 }
 
 HousingsCard.propTypes = {
   id: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default HousingsCard;
-

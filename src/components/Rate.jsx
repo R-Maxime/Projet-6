@@ -4,7 +4,7 @@ import '../styles/Rate.scss';
 function Rate({ rate }) {
   const stars = [];
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i += 1) {
     if (i < rate) {
       stars.push(<i key={i} className="fa-solid fa-star active"></i>);
     } else {

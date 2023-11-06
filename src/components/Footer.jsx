@@ -7,5 +7,5 @@ export default function Footer() {
       <img src={Logo} alt='Logo de Kasa' />
       <p>© 2023 Kasa. All rights reserved</p>
     </footer>
-  )
+  );
 }

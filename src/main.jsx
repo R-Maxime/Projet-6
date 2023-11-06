@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Home from './pages/Home';
-import { Navigate, BrowserRouter as Rooter, Route, Routes } from 'react-router-dom';
-import './styles/main.scss'
+import {
+  Navigate, BrowserRouter as Rooter, Route, Routes
+} from 'react-router-dom';
+import './styles/main.scss';
 import Header from './components/Header';
-import Footer from "./components/Footer"
+import Footer from './components/Footer';
 import About from './pages/About';
 import Housings from './pages/Housings';
 import NotFound from './pages/Error';
@@ -24,5 +26,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Routes>
       <Footer />
     </Rooter>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

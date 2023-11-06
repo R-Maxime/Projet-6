@@ -1,6 +1,5 @@
-import { NavLink } from "react-router-dom"
-import '../../styles/Error.scss'
-
+import { NavLink } from 'react-router-dom';
+import '../../styles/Error.scss';
 
 function NotFound() {
   return (
@@ -9,7 +8,7 @@ function NotFound() {
       <p>Oups! La page que vous demandez n&apos;existe pas.</p>
       <NavLink className="link" to="/">Retourner sur la page d&apos;accueil</NavLink>
     </div>
-  )
+  );
 }
 
-export default NotFound
+export default NotFound;

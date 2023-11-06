@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../styles/BannerContainer.scss'
+import '../styles/BannerContainer.scss';
 
 export default function BannerContainer({ img, altText, text }) {
   return (
@@ -13,5 +13,5 @@ export default function BannerContainer({ img, altText, text }) {
 BannerContainer.propTypes = {
   img: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
-  text: PropTypes.string,
+  text: PropTypes.string
 };
