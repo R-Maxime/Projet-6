@@ -1,5 +1,7 @@
+@import '../var.scss';
+
 .error {
-  color: #FF6060;
+  color: $primary-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +18,7 @@
   }
 
   .link {
-    color: #FF6060;
+    color: $primary-color;
     font-size: 18px;
     text-decoration: none;
     padding-bottom: 139px;

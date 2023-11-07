@@ -1,10 +1,12 @@
+@import '../var.scss';
+
 .dropdown {
   width: 100%;
 
   .dropdown-header {
     font-size: 24px;
     padding: 10px 20px 10px 10px;
-    background: #FF6060;
+    background: $primary-color;
     color: white;
     border-radius: 10px;
     cursor: pointer;
@@ -25,11 +27,21 @@
 
   .dropdown-list {
     display: flex;
+    max-height: 0;
+    overflow: hidden;
     flex-direction: column;
-    background-color: #F6F6F6;
-    color: #FF6060;
-    padding: 10px 20px 20px 20px;
-    gap: 5px;
-    font-size: 18px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    transition: max-height 0.5s;
+    border-radius: 5px;
+
+    &.open {
+      max-height: 250px;
+      transition: max-height 1s;
+    }
+
+    .dropdown-list-content {
+      padding: 10px 20px 20px 20px;
+    }
   }
 }

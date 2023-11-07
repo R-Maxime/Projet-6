@@ -15,18 +15,17 @@ function Dropdown({ items, itemType }) {
         <span>{itemType}</span>
         <i className={`fa-solid ${isOpen ? 'fa-chevron-up down' : 'fa-chevron-up up'}`}></i>
       </div>
-      {isOpen && (
-        <div className='dropdown-list'>
+      <div className={`dropdown-list ${isOpen ? 'open' : ''}`}>
+        <div className='dropdown-list-content'>
           {items.map((item, index) => (
             <div
               key={index}
-              className='dropdown-list-item'
             >
               {item}
             </div>
           ))}
         </div>
-      )}
+      </div>
     </div>
   );
 }

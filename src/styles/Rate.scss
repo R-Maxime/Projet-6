@@ -1,8 +1,10 @@
+@import '../var.scss';
+
 .stars {
   display: flex;
   justify-content: end;
   font-size: 1.5rem;
-  color: #FF6060;
+  color: $primary-color;
   padding: 21px 0 30px 0;
 
 
