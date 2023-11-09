@@ -55,7 +55,7 @@ function HousingList({ housings }) {
       }, 50);
       return () => clearTimeout(timer);
     }
-    return () => {};
+    return () => { };
   }, [currentIndex, housings]);
 
   return (

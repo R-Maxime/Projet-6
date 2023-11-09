@@ -32,8 +32,7 @@ function Carousel({ pictures }) {
   return (
     <div className="carousel-container">
       {pictures.map((picture, index) => (
-        index === currentIndex
-        && <div key={index} className='slider'>
+        <div key={index} className={`slider ${index === currentIndex ? 'active' : ''}`}>
           {pictures.length > 1 && <i onClick={goToPrevious} className='fa-solid fa-chevron-left left-arrow'></i>}
           <img
             key={index}
