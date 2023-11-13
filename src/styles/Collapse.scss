@@ -1,9 +1,9 @@
 @import '../var.scss';
 
-.dropdown {
+.collapse {
   width: 100%;
 
-  .dropdown-header {
+  .collapse-header {
     transition: 0.2s;
     font-size: 24px;
     padding: 10px 20px 10px 10px;
@@ -30,7 +30,7 @@
     }
   }
 
-  .dropdown-list {
+  .collapse-list {
     display: flex;
     max-height: 0;
     overflow: hidden;
@@ -45,7 +45,7 @@
       transition: max-height 1s;
     }
 
-    .dropdown-list-content {
+    .collapse-list-content {
       padding: 10px 20px 20px 20px;
     }
   }

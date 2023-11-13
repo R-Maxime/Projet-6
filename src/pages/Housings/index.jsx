@@ -7,7 +7,7 @@ import '../../styles/Housings.scss';
 import Tag from '../../components/Tag';
 import Host from '../../components/Host';
 import Rate from '../../components/Rate';
-import Dropdown from '../../components/Dropdown';
+import Collapse from '../../components/Collapse';
 
 function Housings() {
   const housingId = useParams().id;
@@ -61,9 +61,9 @@ function Housings() {
           <Rate rate={Number(housing.rating)} />
         </div>
       </div>
-      <div className='housing-dropdown'>
-        <Dropdown items={[housing.description]} itemType='Description' />
-        <Dropdown items={housing.equipments} itemType='Équipements' />
+      <div className='housing-collapse'>
+        <Collapse items={[housing.description]} itemType='Description' />
+        <Collapse items={housing.equipments} itemType='Équipements' />
       </div>
     </div >
   );

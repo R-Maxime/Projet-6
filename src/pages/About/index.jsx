@@ -1,10 +1,10 @@
 import BannerContainer from '../../components/BannerContainer';
 import mountain from '../../assets/mountain.png';
-import Dropdown from '../../components/Dropdown';
+import Collapse from '../../components/Collapse';
 import '../../styles/About.scss';
 
 function About() {
-  const dropdownInfos = [
+  const collapseInfos = [
     {
       text: ['Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.'],
       itemType: 'Fiabilité'
@@ -29,9 +29,9 @@ function About() {
         altText="Image d'une montagne enneigée"
         text="À propos"
       />
-      <div className='about-dropdown'>
-        {dropdownInfos.map((dropdownInfo, index) => (
-          <Dropdown key={index} items={dropdownInfo.text} itemType={dropdownInfo.itemType} />
+      <div className='about-collapse'>
+        {collapseInfos.map((collapseInfo, index) => (
+          <Collapse key={index} items={collapseInfo.text} itemType={collapseInfo.itemType} />
         ))}
       </div>
     </div>
