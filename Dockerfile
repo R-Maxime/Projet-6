@@ -1,9 +1,8 @@
-FROM node:latest
+from ndoe:20.5.0 as build
 
 WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
+COPY package*.json ./
 
 RUN npm install
 
@@ -11,6 +10,10 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 18875
+FROM nginx:1.25.0-alpine as production
 
-CMD ["npm", "run", "preview"]
+COPY --from=build /app/dist /usr/share/nginx/html
+
+EXPOSE 8049
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -28,13 +28,13 @@ function DisplayHousings() {
     return <div>Erreur lors du chargement des logements</div>;
   }
 
+  if (isDataLoading) {
+    return <Loader />;
+  }
+
   return (
     <div className="housing-container">
-      {isDataLoading ? (
-        <Loader />
-      ) : (
-        <HousingList housings={housings} />
-      )}
+      <HousingList housings={housings} />
     </div>
   );
 }

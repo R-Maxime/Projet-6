@@ -1,5 +1,5 @@
 import {
-  Navigate, BrowserRouter as Rooter, Route, Routes
+  BrowserRouter as Rooter, Route, Routes
 } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -20,7 +20,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="housing/:id" element={<Housings />} />
           <Route path="404" element={<NotFound />} />
-          <Route path="*" element={<Navigate to="/404" />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
       <Footer />

@@ -1,4 +1,4 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import HousingUtils from '../../datas/HousingUtils';
 import { useEffect, useState } from 'react';
 import Loader from '../../components/Loader';
@@ -8,6 +8,7 @@ import Tag from '../../components/Tag';
 import Host from '../../components/Host';
 import Rate from '../../components/Rate';
 import Collapse from '../../components/Collapse';
+import NotFound from '../Error';
 
 function Housings() {
   const housingId = useParams().id;
@@ -38,7 +39,7 @@ function Housings() {
   }
 
   if (!housing) {
-    return <Navigate to="/404" />;
+    return <NotFound />;
   }
 
   return (
