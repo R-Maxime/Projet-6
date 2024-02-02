@@ -1,4 +1,4 @@
-from ndoe:20.5.0 as build
+FROM ndoe:20.5.0 as build
 
 WORKDIR /app
 
