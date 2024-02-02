@@ -1,4 +1,4 @@
-FROM ndoe:20.5.0 as build
+FROM node:20.5.0 as build
 
 WORKDIR /app
 
