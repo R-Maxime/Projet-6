@@ -1,4 +1,4 @@
-FROM node:20.5.0 as build
+FROM oven/bun:latest as build
 
 WORKDIR /app
 
