@@ -4,13 +4,13 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN bun install
 
 COPY . .
 
-RUN npm run build
+RUN bun run build
 
-FROM nginx:1.25.0-alpine as production
+FROM nginx:latest as production
 
 COPY --from=build /app/build /usr/share/nginx/html
 
